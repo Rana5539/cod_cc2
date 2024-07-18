@@ -83,7 +83,7 @@ const VideoTranslator: React.FC<VideoTranslatorProps> = ({ videoId }) => {
       />
       <div className={styles.transcript}>
         {transcript.map((item, index) => (
-          <p
+          <p style={{color:'black'}}
             key={index}
             className={
               currentTime >= item.start && currentTime <= item.start + item.duration
@@ -97,7 +97,7 @@ const VideoTranslator: React.FC<VideoTranslatorProps> = ({ videoId }) => {
       </div>
       <div className={styles.translation}>
         {translation.map((item, index) => (
-          <p key={index}>{item.text}</p>
+          <p key={index} style={{color:'black'}}>{item.text}</p>
         ))}
       </div>
     </div>
